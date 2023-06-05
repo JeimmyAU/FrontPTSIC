@@ -1,0 +1,5 @@
+<div class="logout-container justify-content-end">
+    <p *ngIf="isPanel"></p>
+    <p *ngIf="!isPanel" class="logout" (click)="back()">Atras</p>
+    <p class="logout" (click)="logout()">Cerrar sesion</p>
+</div>

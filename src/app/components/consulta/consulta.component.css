@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+  }
+
+  th {
+    background-color: #000000;
+    color: white;
+    font-weight: 400;
+  }
+
+  .logout{
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.consult-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 202, 202);
+  display: flex;
+  flex-direction: column;
+}
+.table-container{
+  margin: 40px;
+}

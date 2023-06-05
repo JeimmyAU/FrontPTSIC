@@ -1,0 +1,26 @@
+<section class="login">
+  <div class="image-stats-container">
+    <img
+      class="image-stats"
+      src="https://images.pexels.com/photos/669622/pexels-photo-669622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="imagen de datos"
+    />
+  </div>
+  <article class="login-container">
+    <div class="card-login">
+      <p class="login-text">Inicia Sesión</p>
+      
+      <form class="example-form" [formGroup]="formulario">
+        <p class="input-text">Usuario</p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Ingrese su usuario" formControlName="username">
+        </mat-form-field>
+        <p class="input-text">Contraseña</p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Ingrese su contraseña" type="password" formControlName="pass">
+        </mat-form-field>
+        <button class="login-button" type="button" (click)="onSubmit()" [disabled]="formulario.invalid">Iniciar Sesión</button>
+      </form>
+    </div>
+  </article>
+</section>

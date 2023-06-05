@@ -1,0 +1,30 @@
+<article class="consult-container">
+  <app-header></app-header>
+  <section class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Número de Documento</th>
+          <th>Email</th>
+          <th>Comentarios</th>
+          <th>Marca</th>
+          <th>Fecha</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let encuesta of listaEncuestas">
+          <td>{{ encuesta.id }}</td>
+          <td>{{ encuesta.numeroDocumento }}</td>
+          <td>{{ encuesta.email }}</td>
+          <td>{{ encuesta.comentarios }}</td>
+          <td>{{ encuesta.marcaFavoritaPc }}</td>
+          <td>{{ encuesta.fechaRespuesta }}</td>
+           
+          <td> <button (click)="deleteBrand(encuesta.id ? encuesta.id : 0)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

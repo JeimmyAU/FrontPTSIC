@@ -1,0 +1,15 @@
+<article class="panel-container">
+  <app-header [isPanel]="true"></app-header>
+  <div class="logout-container justify-content-center">
+    <p class="principal-text">Panel principal</p>
+  </div>
+
+  <div class="button-container">
+    <button class="button green" (click)="redirect(true)">
+      Crea un nueva encuesta
+    </button>
+    <button class="button blue" (click)="redirect(false)">
+      Consulta las encuestas
+    </button>
+  </div>
+</article>

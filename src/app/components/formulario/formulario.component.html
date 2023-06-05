@@ -1,0 +1,50 @@
+<article class="form-container">
+  <app-header></app-header>
+  <div class="card-container">
+    <div class="card-login">
+      <p class="login-text">Encuesta</p>
+      <form class="example-form" [formGroup]="formulario">
+        <p class="input-text">No. de documento</p>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Ingrese numero de documento"
+            type="number"
+            formControlName="numeroDocumento"
+          />
+          <mat-error>
+            Porfavor ingrese el un numero de documento valido
+          </mat-error>
+        </mat-form-field>
+        <p class="input-text">Correo</p>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Ingrese su correo"
+            type="text"
+            formControlName="email"
+          />
+          <mat-error> Porfavor ingrese el un correo valido </mat-error>
+        </mat-form-field>
+        <p class="input-text">Comentarios</p>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Escriba aqui sus comentarios"
+            type="text"
+            formControlName="comentarios"
+          />
+        </mat-form-field>
+        <p class="input-text">Marca favorita de pc</p>
+        <select class="select" formControlName="marcaFavoritaPc">
+          <option *ngFor="let marca of marcas" [value]="marca.nombre">{{marca.nombre}}</option>
+        </select>
+      </form>
+      <button class="login-button" type="button" (click)="onSubmit()" [disabled]="formulario.invalid">
+        Guardar
+      </button>
+    </div>
+  </div>
+  
+  <p class="logout">.</p>
+</article>
